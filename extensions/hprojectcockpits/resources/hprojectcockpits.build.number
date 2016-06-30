@@ -1,0 +1,9 @@
+#Ant properties
+#Tue May 17 12:25:57 CEST 2016
+builddate=20160517 1225
+description=hprojectcockpits
+name=hprojectcockpits
+releasedate=20160407 1737
+vendor=hybris
+version=6.0.0.1
+version.api=6.0.0
