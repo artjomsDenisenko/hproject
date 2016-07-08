@@ -1,0 +1,45 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.iml
+*.idea
+.DS_Store
+
+# Local resources #
+**.classpath
+**.project
+**.settings**
+**gensrc**
+**generated**
+**Generated**
+**.log
+**eclipsebin**
+jalo
+**build.xml
+**.xsd
+**platformhome.properties
+**testclasses.xml
+**/target/
+/bin/
+**ruleset.xml
+
+# Extensions #
+/extensions/hprojectstorefront/**/addons/
+/extensions/hprojectstorefront/**/addonsrc/
+/extensions/hprojectstorefront/web/commonwebsrc/
+/extensions/hprojectstorefront/web/webroot/cockpit
+
+.lastupdate
+
+/extensions/hprojectstorefront/web/webroot/_ui/minimized
+/extensions/hprojectstorefront/web/webroot/WEB-INF/messages/base.properties
+/extensions/hprojectstorefront/web/webroot/WEB-INF/messages/site-hproject.properties
+/extensions/hprojectstorefront/web/webroot/WEB-INF/messages/theme-hproject.properties
+
+/extensions/hprojectcore/resources/hprojectcore/integration/hproject/**
+!/extensions/hprojectcore/resources/hprojectcore/integration/hproject/**/README.md
+
+!/configurations/external-libs/*.jar
