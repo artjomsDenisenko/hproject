@@ -51,7 +51,7 @@
 		
 		<relation code="MatchToPeriod" localized="false" generate="true" autocreate="true">
 			<sourceElement type="Match" qualifier="match" cardinality="one"/>
-			<targetElement type="Period" qualifier="pariods" cardinality="many">
+			<targetElement type="Period" qualifier="periods" cardinality="many">
 				<description>The list of Periods in one Match</description>
 			</targetElement>
 		</relation>
@@ -146,6 +146,12 @@
 				jaloclass="com.ecenta.hproject.core.jalo.Team">
 				<description>Football team, consists of 2 players.</description>
 				<deployment table="hTeam" typecode="11100"/>
+				<attributes>
+					<attribute qualifier="name" type="Team">
+						<description>Team name</description>
+						<persistence type="property" />
+					</attribute>
+				</attributes>
 			</itemtype>
 			
 			<itemtype code="Match" 
