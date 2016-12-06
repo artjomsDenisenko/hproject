@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2000-2015 hybris AG
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of hybris
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with hybris.
+  -->
+
+<config xmlns="http://www.hybris.com/cockpit/config">
+
+	<!-- hprojectbackoffice UI configuration should be provided here -->
+
+	<!--<context component="component-code" module="hprojectbackoffice">-->
+		<!--Please check documentation for code snippets for specific components-->
+	<!--</context>-->
+
+  <context component="explorer-tree" merge-by="module">
+    <explorer-tree:explorer-tree
+      xmlns:explorer-tree="http://www.hybris.com/cockpitng/config/explorertree">
+      <explorer-tree:navigation-node id="Football">
+        <explorer-tree:type-node id="Team"
+          code="Team" />
+      <explorer-tree:type-node id="Match"
+          code="Match" />
+        <explorer-tree:type-node id="Player"
+          code="Player" />
+          <explorer-tree:type-node id="Period"
+          code="Period" />
+      </explorer-tree:navigation-node>
+    </explorer-tree:explorer-tree>
+  </context>
+
+  <context type="Team" component="listview">
+    <list-view:list-view
+      xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+      <list-view:column qualifier="players" />
+      <list-view:column qualifier="name" />
+    </list-view:list-view>
+  </context>
+
+  <context type="Player" merge-by="type" parent="Customer" component="listview">
+    <list-view:list-view
+      xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+    </list-view:list-view>
+  </context>
+
+  <context type="Match" component="listview">
+    <list-view:list-view
+      xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+      <list-view:column qualifier="team1" />
+      <list-view:column qualifier="team2" />
+      <list-view:column qualifier="winningTeam" />
+      <list-view:column qualifier="totalScore" />
+    </list-view:list-view>
+  </context>
+
+  <context type="Period" component="listview">
+    <list-view:list-view
+      xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+      <list-view:column qualifier="homeTeamScore" />
+      <list-view:column qualifier="guestTeamScore" />
+      <list-view:column qualifier="extended" />
+      <list-view:column qualifier="time" />
+    </list-view:list-view>
+  </context>
+
+  <context type="Team" component="editor-area">
+    <editorArea:editorArea
+      xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+      <editorArea:tab name="hmc.essential">
+        <editorArea:section name="hmc.essential">
+          <editorArea:attribute qualifier="players" />
+          <editorArea:attribute qualifier="name" />
+        </editorArea:section>
+      </editorArea:tab>
+    </editorArea:editorArea>
+  </context>
+
+  <context type="Match" component="editor-area">
+    <editorArea:editorArea
+      xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+      <editorArea:tab name="hmc.essential">
+        <editorArea:section name="hmc.essential">
+          <editorArea:attribute qualifier="team1" />
+          <editorArea:attribute qualifier="team2" />
+          <editorArea:attribute qualifier="totalScore" />
+          <editorArea:attribute qualifier="winningTeam" />
+          <editorArea:attribute qualifier="periods" />
+        </editorArea:section>
+      </editorArea:tab>
+    </editorArea:editorArea>
+  </context>
+
+  <context type="Period" component="editor-area">
+    <editorArea:editorArea
+      xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+      <editorArea:tab name="hmc.essential">
+        <editorArea:section name="hmc.essential">
+          <editorArea:attribute qualifier="homeTeamScore" />
+          <editorArea:attribute qualifier="guestTeamScore" />
+          <editorArea:attribute qualifier="extended" />
+          <editorArea:attribute qualifier="time" />
+        </editorArea:section>
+      </editorArea:tab>
+    </editorArea:editorArea>
+  </context>
+
+  <context type="Player" merge-by="type" parent="Customer" component="editor-area">
+    <editorArea:editorArea
+      xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+      <editorArea:tab name="hmc.essential">
+        <editorArea:section name="hmc.essential">
+        </editorArea:section>
+      </editorArea:tab>
+    </editorArea:editorArea>
+  </context>
+
+</config>
